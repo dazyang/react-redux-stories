@@ -10,6 +10,10 @@ const Subreddit = ({subreddits}) => (
       <Post
         key={i}
         title={post.title}
+        selftext={post.selftext}
+        author={post.author}
+        created={post.created}
+
         />
     )}
   </div>
@@ -20,6 +24,7 @@ Subreddit.propTypes = {
 }
 
 const mapStateToProps = (state) => {
+  console.log({state})
   return {
     subreddits: state.subreddits
   }
